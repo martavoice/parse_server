@@ -12,7 +12,7 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://heroku_6b94hkq7:guotb2cru199mgffq0nfje60oi@ds225308.mlab.com:25308/heroku_6b94hkq7',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || 'bookTracker', //Add your master key here. Keep it secret!
@@ -36,7 +36,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('I dream of being a website.  Please star the parse-server repo on GitHub!');
+  res.status(200).send('I dream of being a website. mndjasdkcj Please star the parse-server repo on GitHub!');
 });
 
 // There will be a test page available on the /test path of your server url
